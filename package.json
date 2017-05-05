@@ -1,0 +1,32 @@
+{
+  "name": "@fibjs/cluster-server",
+  "version": "1.0.0",
+  "description": "Start a multi-thread server to take advantage of multi-core systems.",
+  "main": "lib/cluster.js",
+  "scripts": {
+    "test": "fibjs test/test.js",
+    "ci": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs-modules/cluster-server.git"
+  },
+  "keywords": [
+    "cluster",
+    "server",
+    "multi-thread",
+    "fibjs"
+  ],
+  "author": "ngot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fibjs-modules/cluster-server/issues"
+  },
+  "homepage": "https://github.com/fibjs-modules/cluster-server#readme",
+  "ci": {
+    "type": "travis"
+  },
+  "devDependencies": {
+    "@fibjs/ci": "^1.0.0"
+  }
+}
