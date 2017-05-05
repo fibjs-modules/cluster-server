@@ -37,7 +37,7 @@ const cluster = require('@fibjs/cluster-server');
 const path = require('path');
 
 const server = cluster({
-  port: 3000,// server port
+  port: 8000,// server port,default to 8000
   worker: path.join(__dirname, 'worker.js'), // full path to worker 
   numbers: 4,// default to cpu numbers
 });
