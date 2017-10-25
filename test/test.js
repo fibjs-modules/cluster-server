@@ -12,7 +12,7 @@ describe("cluster", () => {
   const worker = path.join(__dirname, 'fixtures/app.js');
 
   it('should new works ok', () => {
-    const server = cluster({
+    const server = new cluster({
       worker,
     });
     server.run();

@@ -36,10 +36,10 @@ $ npm i @fibjs/cluster-server --save
 server.js :
 
 ```js
-const cluster = require('@fibjs/cluster-server');
+const Cluster = require('@fibjs/C-server');
 const path = require('path');
 
-const server = cluster({
+const server = new Cluster({
   port: 8000,// server port,default to 8000
   worker: path.join(__dirname, 'worker.js'), // full path to worker 
   numbers: 4,// default to cpu numbers
