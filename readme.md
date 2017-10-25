@@ -46,6 +46,7 @@ const server = new Cluster({
 });
 
 server.run(); // start server asynchronously
+// server.close(); // close server
 ```
 
 worker.js :
