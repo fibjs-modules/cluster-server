@@ -1,3 +1,5 @@
+'use strict';
+
 const test = require('test');
 const path = require('path');
 const http = require('http');
