@@ -2,6 +2,7 @@ const test = require('test');
 const path = require('path');
 const http = require('http');
 const assert = require('assert');
+const co = require('coroutine');
 
 test.setup();
 
@@ -13,11 +14,12 @@ describe("cluster", () => {
   it('should new works ok', () => {
     const server = cluster({
       worker,
-      numbers: 1,
     });
-    server.runAsync();
-    const r = http.get('http://127.0.0.1:8000');
-    assert(r.readAll().toString(), 'Hello, World!');
+    server.run();
+    const res = co.parallel(() => {
+      return http.get('http://127.0.0.1:8000').readAll().toString();
+    }, 100);
+    res.forEach(el => assert(el, 'Hello, World!'));
     server.close();
   });
 });

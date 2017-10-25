@@ -45,9 +45,7 @@ const server = cluster({
   numbers: 4,// default to cpu numbers
 });
 
-server.run(); // start server synchronously
-// server.runAsync(); // start server asynchronously
-// server.close(); // stop server
+server.run(); // start server asynchronously
 ```
 
 worker.js :
