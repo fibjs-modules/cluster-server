@@ -1,6 +1,6 @@
 {
   "name": "@fibjs/cluster-server",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Start a multi-thread server to take advantage of multi-core systems.",
   "main": "lib/cluster.js",
   "scripts": {
