@@ -36,7 +36,7 @@ $ npm i @fibjs/cluster-server --save
 server.js :
 
 ```js
-const Cluster = require('@fibjs/C-server');
+const Cluster = require('@fibjs/cluster-server');
 const path = require('path');
 
 const server = new Cluster({
