@@ -11,17 +11,23 @@ test.setup();
 const cluster = require('../');
 
 describe("cluster", () => {
-  const worker = path.join(__dirname, 'fixtures/app.js');
-
-  it('should new works ok', () => {
+  xit('should fn handler works ok', () => {
     const server = new cluster({
-      worker,
+      worker: path.join(__dirname, 'fixtures/worker_fn.js'),
+      numbers: 2
     });
     server.run();
-    const res = co.parallel(() => {
-      return http.get('http://127.0.0.1:8000').readAll().toString();
-    }, 100);
-    res.forEach(el => assert(el, 'Hello, World!'));
+    assert(http.get('http://127.0.0.1:8000/abc').readAll().toString(), 'Hello, Wrold!')
+    server.close();
+  });
+
+  it('should router handler works ok', () => {
+    const server = new cluster({
+      worker: path.join(__dirname, 'fixtures/worker_router.js'),
+      numbers: 2
+    });
+    server.run();
+    assert(http.get('http://127.0.0.1:8000/abc').readAll().toString(), 'Hello, abc!')
     server.close();
   });
 });

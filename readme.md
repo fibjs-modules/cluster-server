@@ -63,6 +63,10 @@ then you can start server:
   fibjs server.js
 ```
 
+## worker.js
+
+We can export any handler described at [http://fibjs.org/docs/manual/module/ifs/mq.md.html#Handler](http://fibjs.org/docs/manual/module/ifs/mq.md.html#Handler).
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/fibjs-modules/cluster-server/issues).
