@@ -1,4 +1,10 @@
 
+3.0.0 / 2019-09-08
+==================
+
+  * ci: limit fibjs support version
+  * feat: add more worker handler type support
+
 2.0.3 2019-04-09
 ==================
 
